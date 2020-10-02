@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:login_singnup_flutter_app/constants/constants.dart';
 import 'package:login_singnup_flutter_app/database/database_helper.dart';
 import 'package:login_singnup_flutter_app/models/user.dart';
-import 'package:login_singnup_flutter_app/result.dart';
 import 'package:login_singnup_flutter_app/ui/login.dart';
 import 'package:login_singnup_flutter_app/ui/widgets/custom_shape.dart';
 import 'package:login_singnup_flutter_app/ui/widgets/customappbar.dart';
@@ -422,7 +421,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         var db = new DatabaseHelper();
         db.saveUser(users);
         _isLoading = false;
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Login()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignInPage()));
       });
     }
   }
